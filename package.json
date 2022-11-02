@@ -1,10 +1,13 @@
 {
   "name": "ab-hooks",
-  "version": "0.0.3",
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "version": "0.0.4",
+  "description": "A react hooks library",
+  "keywords": [
+    "react",
+    "react-hooks"
+  ],
+  "author": "lucy-stwt",
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "build": "rollup -c",
