@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "./",
+    "sourceMap": true,
+    "emitDeclarationOnly": true
+  },
+  "exclude": ["node_modules", "dist"]
+}
