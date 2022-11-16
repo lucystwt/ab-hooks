@@ -2,7 +2,13 @@ import { useCallback } from 'react'
 
 import useSyncRef from './sync-ref'
 
-export default function useEvent<T extends (...args: any[]) => any>(handler: T) {
+export default function useEvent<
+  T extends ((...args: any[]) => any) | undefined
+>(handler: T) {
   const $handler = useSyncRef(handler)
-  return useCallback((...args: any[]) => $handler.current(...args), [$handler]) as T
+  const memoHandler = useCallback(
+    (...args: any[]) => $handler.current && $handler.current(...args),
+    [$handler]
+  ) as T
+  return memoHandler
 }
